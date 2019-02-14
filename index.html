@@ -5,6 +5,11 @@
 img {
   float: left;
 }
+
+h1 {
+  background:#dbdcdd;
+}
+
 </style>
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
@@ -15,10 +20,10 @@ img {
 </head>
 <body>
 
-<nav class="navbar navbar-inverse fixed-top">
+<nav class="navbar navbar-inverse ">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="index.html">Latitude</a>
+      <a class="navbar-brand" href="index.html" title=Home>Latitude</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
 	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Plot <span class="caret"></span></a>
@@ -39,13 +44,14 @@ img {
 <div class="container-fluid text-center">    
   <div class="row content">
 
-    <div class="col-sm-8 text-left bg-light"> 
+    <div class="col-sm-8 text-left bg-lightgrey" > 
       <h1>Summary: Latitude vs. X</h1>
 	  <hr>	
-	  <p><img src="output_data/Latitude_MaxTemp.png" alt="Max" style="width:170px;height:170px;margin-right:15px;">
+	  <p><img src="output_data/Latitude_MaxTemp.png" alt="Max" style="width:300px;height:300px;margin-right:15px;">
+	
       <p style="font-size:20px;">The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API, to assemble a dataset on over 500 cities.
-<br>
-<br>
+	<br>
+	<br>
 After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude. Factors we looked at included:<br>
 <br>
 Temperature, cloudiness, wind speed and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.
@@ -72,13 +78,21 @@ Temperature, cloudiness, wind speed and humidity. This site provides the source 
   clear: both;
   display: table;
 }
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #428bca;
+  color: white;
+  text-align: center;
+}
 </style>
 	
-	
-	
-	
-	
-	
+<div class="footer">
+  <p>Footer</p>
+</div>
+
     <div class="col-sm-4 sidenav">
 	
 	<h1>Visualizations</h1>
@@ -114,6 +128,7 @@ Temperature, cloudiness, wind speed and humidity. This site provides the source 
 <!-- <footer class="container-fluid text-center">
   <p>Footer Text</p>
 </footer> -->
+
 
 </body>
 </html>

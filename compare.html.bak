@@ -8,7 +8,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   
-    
+    <!-- <script type="text/javascript" src="js/lib/jquery-1.11.1.min.js" ></script>
+   <script> 
+     $(function(){ $("head").load("header.html") });
+   </script> -->
 
 <style>
 h1 {
@@ -27,7 +30,9 @@ h1 {
 </head>
 <body>
 
-
+<div class="footer">
+  <p>Footer</p>
+</div>
 
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
@@ -54,52 +59,9 @@ h1 {
   <hr >
   <p>Click any plot to get in-depth analysis.</p>
 </div>
-<!------------------------------------------------------------------------------------------------>
 
-<!---------------------------------------------------------------------->
 
-  <div class="row">
-     <div class="col-sm-6 col-md-6 col-lg-6">
-		<img src="output_data/Latitude_Cloudiness.png" alt="Cloudiness" title="Latitude Vs Cloud" style="width:400px;height:400px;" usemap="#latcloud">
-		<map name="latcloud">
-          <area target="_parent" alt="Latitude Vs Cloud" title="Latitude Vs Cloud" href="latitude_vs_cloud_detail.html" coords="430,287,1,2" shape="rect" >
-        </map>
-      </div>
-	  
-	 <div class="col-sm-6 col-md-6 col-lg-6" >
-        <img src="output_data/Latitude_Humidity.png" alt="hum" style="width:400px;height:400px;" usemap="#lathumid">
-		<map name="lathumid">
-          <area target="_parent" alt="Latitude Vs Humidity" title="Latitude Vs Humidity" href="latitude_vs_humidity_detail.html" coords="0,0,1,282,431,283,429,0" shape="poly" >
-        </map>
-      </div>
-   </div>
-   
-     <div class="row">
-     <div class="col-sm-6 col-md-6 col-lg-6">
-		<img src="output_data/Latitude_MaxTemp.png" alt="temp" style="width:400px;height:400px;" usemap="#lattemp">
-		<map name="lattemp">
-			<area target="_parent" alt="Latitude Vs Max Temp" title="Latitude Vs Max Temp" href="latitude_vs_temp_detail.html" coords="425,287,0,0" shape="rect" >
-		</map>
-		
-      </div>
-	  
-	 <div class="col-sm-6 col-md-6 col-lg-6" >
-        <img src="output_data/Latitude_Wind_Speed.png" alt="wind" style="width:400px;height:400px;" usemap="#latwind">
-		<map name="latwind">
-           <area target="_parent" alt="Latitude Vs Wind" title="Latitude Vs Wind" href="latitude_vs_wind_detail.html" coords="2,1,2,286,431,285,431,2" shape="poly" >
-        </map>
-      </div>
-   </div>
-   <br>
-   <br>
-   
-   
-   
-</div>
-<!---------------------------------------------------------------------->
-
-<!------------------------------------------------------------------------------------------------>
-<!-- <img src="output_data/Latitude_MaxTemp.png" alt="Lat vs Temp" style="width:400px;height:400px;" usemap="#lattemp">
+<img src="output_data/Latitude_MaxTemp.png" alt="Lat vs Temp" style="width:400px;height:400px;" usemap="#lattemp">
 
 <map name="lattemp">
     <area target="_parent" alt="Latitude Vs Max Temp" title="Latitude Vs Max Temp" href="latitude_vs_temp_detail.html" coords="425,287,0,0" shape="rect" >
@@ -115,13 +77,10 @@ h1 {
 
 <map name="lathumid">
     <area target="_parent" alt="Latitude Vs Humidity" title="Latitude Vs Humidity" href="latitude_vs_humidity_detail.html" coords="0,0,1,282,431,283,429,0" shape="poly" >
-</map> -->
+</map>
 
 
-<div class="footer">
 
-  <p>Footer</p>
-</div>
 
 </tbody>
 </table>
