@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Compare</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -23,104 +23,98 @@ h1 {
   color: white;
   text-align: center;
 }
+
+
+.centerAlign {
+text-align: center;
+}
+
+.centerAlign h3 {
+background: #d4e9fc;
+padding: 10px 0;
+}
 </style>
 </head>
 <body>
 
 
 
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="index.html">Latitude</a>
+      <a class="navbar-brand" href="index.html" title="Home">Latitude</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
 	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Plot <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Page 1-1</a></li>
-          <li><a href="#">Page 1-2</a></li>
-          <li><a href="#">Page 1-3</a></li>
+          <li><a href="latitude_vs_temp_detail.html">Max Temperature</a></li>
+          <li><a href="latitude_vs_humidity_detail.html">Humidity</a></li>
+          <li><a href="latitude_vs_cloud_detail.html">Cloudiness</a></li>
+		  <li><a href="latitude_vs_wind_detail.html">Wind Speed</a></li>
         </ul>
       </li>
-      <li> <a href="#">Compare</a></li>
+      <li> <a href="compare.html">Compare</a></li>
       
       <li><a href="data.html">Data</a></li>
     </ul>
   </div>
 </nav>
   
+  
+  
+  <br /><br />
 <div class="container-fluid">
   <h1 font-size: 10px; style="color:#3B9C9C;" align=left">Comparison: Latitude vs X</h1>
   <hr >
-  <p>Click any plot to get in-depth analysis.</p>
-</div>
-<!------------------------------------------------------------------------------------------------>
+ 
+  <p style="font-size:20px;">
+  After assembling the dataset and using Matplotlib to plot various aspects of the weather vs. latitude, gathered various interesting points on latitude. 
+  Factors we looked at included: Temperature, cloudiness, wind speed and humidity.<br><br>
+  Each individual page provides visualizations created as part of the analysis, as well as explanations and descriptions of any trends and 
+  correlations witnessed.Click any plot to get in-depth analysis.</h3>
+  
+ </p>
 
-<!---------------------------------------------------------------------->
 
-  <div class="row">
-     <div class="col-sm-6 col-md-6 col-lg-6">
-		<img src="output_data/Latitude_Cloudiness.png" alt="Cloudiness" title="Latitude Vs Cloud" style="width:400px;height:400px;" usemap="#latcloud">
-		<map name="latcloud">
-          <area target="_parent" alt="Latitude Vs Cloud" title="Latitude Vs Cloud" href="latitude_vs_cloud_detail.html" coords="430,287,1,2" shape="rect" >
-        </map>
+	 
+	  <div class="row">
+	  
+	   <div class="col-sm-6 centerAlign" >	
+		<h3>Vs. Cloud</h3>
+		<a href="latitude_vs_cloud_detail.html"><img src="output_data/Latitude_Cloudiness.png" alt="Cloudiness" title="Latitude Vs Cloud" usemap="#latcloud" class="img-fluid" ></a>
       </div>
 	  
-	 <div class="col-sm-6 col-md-6 col-lg-6" >
-        <img src="output_data/Latitude_Humidity.png" alt="hum" style="width:400px;height:400px;" usemap="#lathumid">
-		<map name="lathumid">
-          <area target="_parent" alt="Latitude Vs Humidity" title="Latitude Vs Humidity" href="latitude_vs_humidity_detail.html" coords="0,0,1,282,431,283,429,0" shape="poly" >
-        </map>
+	 <div class="col-sm-6  centerAlign" >
+		<h3>Vs. Humidity</h3>
+        <a  href="latitude_vs_humidity_detail.html"><img src="output_data/Latitude_Humidity.png" alt="hum" style="width:400px;height:400px;" usemap="#lathumid"></a>
       </div>
    </div>
    
      <div class="row">
-     <div class="col-sm-6 col-md-6 col-lg-6">
-		<img src="output_data/Latitude_MaxTemp.png" alt="temp" style="width:400px;height:400px;" usemap="#lattemp">
-		<map name="lattemp">
-			<area target="_parent" alt="Latitude Vs Max Temp" title="Latitude Vs Max Temp" href="latitude_vs_temp_detail.html" coords="425,287,0,0" shape="rect" >
-		</map>
-		
+	
+     <div class="col-sm-6 centerAlign">
+	  <h3>Vs. Max Tempreture</h3>
+		<a href="latitude_vs_temp_detail.html"><img src="output_data/Latitude_MaxTemp.png" alt="temp" style="width:400px;height:400px;" usemap="#lattemp"></a>
       </div>
 	  
-	 <div class="col-sm-6 col-md-6 col-lg-6" >
-        <img src="output_data/Latitude_Wind_Speed.png" alt="wind" style="width:400px;height:400px;" usemap="#latwind">
-		<map name="latwind">
-           <area target="_parent" alt="Latitude Vs Wind" title="Latitude Vs Wind" href="latitude_vs_wind_detail.html" coords="2,1,2,286,431,285,431,2" shape="poly" >
-        </map>
+	 <div class="col-sm-6 centerAlign" >
+	 <h3>Vs. Wind Speed</h3>
+        <a href="latitude_vs_wind_detail.html"><img src="output_data/Latitude_Wind_Speed.png" alt="wind" style="width:400px;height:400px;" usemap="#latwind"></a>
       </div>
    </div>
-   <br>
-   <br>
-   
-   
-   
+
 </div>
-<!---------------------------------------------------------------------->
 
-<!------------------------------------------------------------------------------------------------>
-<!-- <img src="output_data/Latitude_MaxTemp.png" alt="Lat vs Temp" style="width:400px;height:400px;" usemap="#lattemp">
+   <br>
+   <br>
 
-<map name="lattemp">
-    <area target="_parent" alt="Latitude Vs Max Temp" title="Latitude Vs Max Temp" href="latitude_vs_temp_detail.html" coords="425,287,0,0" shape="rect" >
-</map>
+</div>
 
-<img src="output_data/Latitude_Cloudiness.png" alt="Latitude vs Cloud" style="width:400px;height:400px;" usemap="#latcloud">
-
-<map name="latcloud">
-    <area target="_parent" alt="Latitude Vs Cloud" title="Latitude Vs Cloud" href="latitude_vs_cloud_detail.html" coords="430,287,1,2" shape="rect" >
-</map>
-
-<img src="output_data/Latitude_Humidity.png" alt="Latitude vs Humidity" style="width:400px;height:400px;" usemap="#lathumid">
-
-<map name="lathumid">
-    <area target="_parent" alt="Latitude Vs Humidity" title="Latitude Vs Humidity" href="latitude_vs_humidity_detail.html" coords="0,0,1,282,431,283,429,0" shape="poly" >
-</map> -->
 
 
 <div class="footer">
 
-  <p>Footer</p>
+  <p>Latitude Analysis Dashboard </p>
 </div>
 
 </tbody>

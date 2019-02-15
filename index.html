@@ -1,3 +1,12 @@
+<!-- Latitude analysis dashboard
+Author: Suvrangshu Ghosh
+Feb ' 14th 2019
+-----------------
+Change History:
+-----------------
+----------------- -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +20,7 @@ h1 {
 }
 
 </style>
-  <title>Bootstrap Example</title>
+  <title>Index </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -23,14 +32,16 @@ h1 {
 <nav class="navbar navbar-inverse ">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="index.html" title=Home>Latitude</a>
+      <a class="navbar-brand" href="index.html" title="Home" 	>Latitude</a>
+	  
     </div>
     <ul class="nav navbar-nav navbar-right">
 	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Plot <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Page 1-1</a></li>
-          <li><a href="#">Page 1-2</a></li>
-          <li><a href="#">Page 1-3</a></li>
+          <li><a href="latitude_vs_temp_detail.html">Max Temperature</a></li>
+          <li><a href="latitude_vs_humidity_detail.html">Humidity</a></li>
+          <li><a href="latitude_vs_cloud_detail.html">Cloudiness</a></li>
+		  <li><a href="latitude_vs_wind_detail.html">Wind Speed</a></li>
         </ul>
       </li>
       <li> <a href="compare.html">Compare</a></li>
@@ -45,20 +56,24 @@ h1 {
   <div class="row content">
 
     <div class="col-sm-8 text-left bg-lightgrey" > 
+	
       <h1>Summary: Latitude vs. X</h1>
 	  <hr>	
 	  <p><img src="output_data/Latitude_MaxTemp.png" alt="Max" style="width:300px;height:300px;margin-right:15px;">
 	
-      <p style="font-size:20px;">The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API, to assemble a dataset on over 500 cities.
-	<br>
-	<br>
-After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude. Factors we looked at included:<br>
+      <p style="font-size:20px;">The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, 
+	  data was first pulled from the OpenWeatherMap API, then over 500 cities accross the world was randomly used to assemble the dataset.
+	  <br>
+	  <br>
+After assembling the dataset, Matplotlib was used to plot various aspects of the weather vs. latitude. <br>
+Factors we looked at included:<br>
 <br>
-Temperature, cloudiness, wind speed and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.
+Temperature, cloudiness, wind speed and humidity.<br><br>
+
+This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.<br>
+
 </p>
-      <hr>
-      <h3>Test</h3>
-      <p>Lorem ipsum...</p>
+      
     </div>
 
 	<style>
@@ -90,29 +105,35 @@ Temperature, cloudiness, wind speed and humidity. This site provides the source 
 </style>
 	
 <div class="footer">
-  <p>Footer</p>
+  <p>Latitude Analysis Dashboard</p>
 </div>
+
+
 
     <div class="col-sm-4 sidenav">
 	
 	<h1>Visualizations</h1>
       <div class="row">
 			<div class="column">
-				<img src="output_data/Latitude_Cloudiness.png" alt="Cloudiness" style="width:200px;height:200px;">
+				<a href="latitude_vs_temp_detail.html"><img src="output_data/Latitude_MaxTemp.png" alt="Maxtemp" style="width:200px;height:200px;" title="Latitude Vs Temp Click for Details"usemap="#lattemp"></a>
+				
 			</div>
 		
 			<div class="column">
-				<img src="output_data/Latitude_Humidity.png" alt="Humidity" style="width:200px;height:200px;">
+				<a href="latitude_vs_humidity_detail.html"><img src="output_data/Latitude_Humidity.png" alt="Humidity" style="width:200px;height:200px;" title="Latitude Vs Humidity Click for Details" usemap="#lathumid"></a>
+				
 			</div>
 		</div>
 		
 		      <div class="row">
 			<div class="column">
-				<img src="output_data/Latitude_Cloudiness.png" alt="Snow" style="width:200px;height:200px;">
+				<a  href="latitude_vs_cloud_detail.html"><img src="output_data/Latitude_Cloudiness.png" alt="Cloud" style="width:200px;height:200px;" title="Latitude Vs Cloud Click for Details"usemap="#latcloud"></a>
+
 			</div>
 		
 			<div class="column">
-				<img src="output_data/Latitude_Humidity.png" alt="Forest" style="width:200px;height:200px;">
+				<a href="latitude_vs_wind_detail.html"><img src="output_data/Latitude_Wind_Speed.png" alt="Wind" style="width:200px;height:200px;" title="Latitude Vs Wind Click for Details"usemap="#latwind"></a>
+				
 			</div>
 		</div>
 		
